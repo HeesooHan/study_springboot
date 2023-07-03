@@ -78,4 +78,13 @@ public class HelloWorldController {
         arrayList = helloWorldService.fakeSelect(currentPage, perPage);
         return ResponseEntity.ok().body(arrayList);
     }
+
+    
+    // helloWorldResponsefake/C001
+    @GetMapping("/helloWorldResponsefake/{companyId}")
+    public ResponseEntity<Object> helloWorldResponsefake(@PathVariable String companyId) {
+        ArrayList arrayList = new ArrayList<>();
+        helloWorldService.fakeSelect(companyId);
+        return ResponseEntity.ok().body(arrayList);
+    }
 }
