@@ -55,7 +55,7 @@
     </insert>
 
     <!-- 수정 -->
-	<update id="update" parameterType="String">
+	<update id="update" parameterType="Map">
         update car_infors
         set CAR_NAME = #{CAR_NAME}
         where CAR_INFOR_ID = #{CAR_INFOR_ID}
